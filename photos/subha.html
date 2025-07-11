@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subha Collection</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe0ec, #ffd6f3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .intro {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: red;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #ff8ecf; }
+      100% { text-shadow: 0 0 20px #ff2da5; }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #7d0049;
+      margin-top: 20px;
+    }
+
+    .enter-button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background:lightskyblue;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .enter-button:hover {
+      background: mediumvioletred;
+      transform: scale(1.05);
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#ff99cc 1px, transparent 1px),
+                        radial-gradient(#ff66b2 1.5px, transparent 1.5px);
+      background-size: 50px 50px;
+      animation: moveStars 30s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveStars {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 1000px 1000px, 500px 500px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="intro">
+    <h1> SUBHA COLLECTION !!!!</h1>
+    <p>Welcome to the world of grace, elegance, and tradition!</p>
+    <button class="enter-button" onclick="location.href='http://127.0.0.1:5500/photos/suba.html'">Enter Store</button>
+  </div>
+</body>
+</html>
+ 

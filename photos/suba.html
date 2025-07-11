@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bangles Store</title>
+   <style>
+    body {
+      position: relative;
+      overflow-x: hidden;
+      background: linear-gradient(to right, #dff2ff, #e6f7ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      animation: fadeIn 1s ease-in;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .stars {
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    .stars::before, .stars::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      animation: twinkle 3s ease-in-out infinite alternate;
+    }
+
+    .stars::before {
+      top: 0; left: 50%;
+      width: 2px; height: 2px;
+      background: red;
+      box-shadow:
+        100px 80px red,
+        250px 200px green,
+        400px 150px pink,
+        600px 300px red,
+        750px 100px green,
+        900px 250px pink;
+    }
+
+    .stars::after {
+      top: 50%; left: 25%;
+      width: 3px; height: 3px;
+      background: pink;
+      box-shadow:
+        80px 20px pink,
+        230px 230px red,
+        370px 120px green,
+        520px 350px pink;
+      animation-delay: 1s;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.4); }
+      100% { opacity: 0.6; transform: scale(1); }
+    }
+
+    nav {
+      background: goldenrod;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: green;
+    }
+
+    .container, section {
+      max-width: 700px;
+      margin: 40px auto;
+      background: lightblue;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .Bangles {
+      width: 300px;
+      height: 300px;
+      border: 2px solid goldenrod;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7);
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    .Bangles:hover {
+      transform: rotate(8deg) scale(1.05);
+      box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.9);
+    }
+
+    .buy-button {
+      background: goldenrod;
+      color: white;
+      border: 1px solid black;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buy-button:hover {
+      background: green;
+      transform: scale(1.05);
+    }
+
+    ul.details {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+      font-size: 1.1rem;
+    }
+
+    ul.details li {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: red;
+    }
+
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      max-width: 100%;
+      height: 400px;
+      border: 1px solid orange;
+      margin: 20px 0;
+    }
+
+    .video-link {
+      color: red;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .video-link:hover {
+      color: green;
+    }
+
+    @media (max-width: 768px) {
+      .Bangles {
+        width: 200px;
+        height: 200px;
+      }
+
+      .buy-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#login">Login</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="home">
+    <img class="Bangles" src="./img.lo/image.png" alt="Golden Bangles" />
+    <h1>Bangles!!!</h1>
+    <ul class="details">
+      <li>Price: $250 (2 sets)</li>
+      <li>Color: Golden</li>
+      <li>Shape: Round</li>
+      <li>Metal: Golden</li>
+      <li>Beautiful Bangles</li>
+    </ul>
+    <a class="buy-button" href="https://www.bing.com/images/search?view=detailV2&ccid=zgquiZRm&id=8BACD20636B64EA24D098BE246ED7FA6DBF2120E&thid=OIP.zgquiZRm-TO8f3lQxwwYmQHaJ4&mediaurl=https%3a%2f%2fwww.indiatrendshop.com%2fcdn%2fshop%2ffiles%2fbn7081.jpg%3fv%3d1720082194%26width%3d900&exph=1200&expw=900&q=Bangles&simid=608034544120907198&FORM=IRPRST&ck=2AC38213CD0C44A7FC57F71F2A04DD51&selectedIndex=19&itb=0" target="_blank">Click to Buy</a>
+
+    <p>
+      Bangles are more than mere accessories. They carry deep cultural, emotional, and symbolic significance.
+    </p>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.032635878168!2d77.34873323330645!3d11.205520872310583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9059e2b15cc53%3A0xf67c95e477d23056!2sPerumanallur%2C%20Tamil%20Nadu%20641666!5e0!3m2!1sen!2sin!4v1752051976041!5m2!1sen!2sin" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <h2>Video Proof:</h2>
+    <a class="video-link" href="https://www.youtube.com/shorts/MbcOX28Lxwk" target="_blank">Click to Watch</a>
+  </div>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>We are a passionate team creating elegant, traditional and modern bangles with love and style. From Perumanallur to the world, we bring sparkle to your wrists!</p>
+  </section>
+
+  <section id="login" class="container">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" style="padding:10px; margin:10px; border-radius:8px;"><br/>
+      <input type="password" placeholder="Password" style="padding:10px; margin:10px; border-radius:8px;"><br/>
+      <button type="submit" class="buy-button">Login</button>
+    </form>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: <strong>bangles@shop.com</strong></p>
+    <p>Phone: <strong>+91 98765 43210</strong></p>
+    <p>Instagram: <a class="video-link" href="https://instagram.com" target="_blank">@bangles_shop</a></p>
+  </section>
+
+</body>
+</html>
